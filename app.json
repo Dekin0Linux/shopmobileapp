@@ -4,27 +4,35 @@
     "slug": "busapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
+
+    "fonts": [
+      {
+        "fontFamily": "Montserrat-Italic",
+        "fontFile": "./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf"
+      },
+      {
+        "fontFamily": "Montserrat-Bold",
+        "fontFile": "./assets/fonts/Montserrat-VariableFont_wght.ttf"
+      }
+    ],
+
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        // "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      // "favicon": "./assets/favicon.png"
     }
+    
   }
+
 }
