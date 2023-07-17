@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Address = () => {
+const AddressInfo = () => {
   return (
     <View>
-      <Address/>
+      <Text>AddressInfo</Text>
     </View>
   )
 }
 
-export default Address
+export default AddressInfo

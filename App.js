@@ -8,12 +8,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Tabs from './components/Tabs';
 import ProductDetails from './screens/ProductDetails';
+import Payment from './screens/Payment';
+import Address from './screens/Address';
 
 
 const Stack =  createStackNavigator()
 
 
-export default function App({navigation,route}) {
+export default function App() {
 
   useEffect(() => {
     async function loadFont() {
@@ -41,6 +43,8 @@ export default function App({navigation,route}) {
         }}
         />
         <Stack.Screen name="ProductDetails" component={ProductDetails} />
+        <Stack.Screen name='PaymentInfo' component={Payment}/>
+        <Stack.Screen name='Address' component={Address} />
         
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,18 +1,9 @@
-import { View, Text ,Image} from 'react-native'
+import { View, Text ,Image, TouchableOpacity} from 'react-native'
 import React,{useState} from 'react'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import Icon2 from 'react-native-vector-icons/Entypo'
 
-const CartCard = ({item,deleteItem,index}) => {
-    const [cartCount,setCartCount] = useState(0)
-
-    const addCount=(item)=>{
-        alert(cartCount+1)
-    }
-
-    const removeCount=()=>{
-        alert('1')
-    }
+const CartCard = ({item,deleteItem,index,add,remove}) => {
 
   return (
     <View className='flex flex-row m-2 px-3 py-5 rounded bg-white'>
@@ -29,12 +20,19 @@ const CartCard = ({item,deleteItem,index}) => {
             <View>
                 <Icon2 name='trash' size={20} color={'red'} onPress={()=>deleteItem(index)}/>
             </View>
-            <View className='flex flex-row items-center gap-3'>
-                <Icon2 name='minus' size={15} onPress={removeCount}/>
+            <View className='flex flex-row items-center'>
+                <TouchableOpacity className='bg-slate-100 p-1 rounded-full' onPress={()=>remove(index)}>
+                    <Icon2 name='minus' size={15} />
+                </TouchableOpacity>
+                
                 <View className='bg-gray-800 items-center justify-center w-6 h-6 text-center rounded-full'>
                     <Text className='text-white font-bold'>{item.quantity}</Text>
                 </View>
-                <Icon2 name='plus' size={15} onPress={addCount}/>
+
+                <TouchableOpacity className='bg-slate-100 p-1 rounded-full' onPress={()=>add(index)}>
+                    <Icon2 name='plus' size={15} />
+                </TouchableOpacity>
+                
             </View>
         </View>
 

@@ -31,9 +31,14 @@ const ProductInfo = ({product,navigation}) => {
         }
     }
 
-    const addTocart=async (item)=>{
+    const addTocart=async(item)=>{
         try{
             const itemsInCart = await getCatItems()
+            let alreadyInCart = itemsInCart.some(obj=>obj.id === item.id)
+            if(alreadyInCart){
+                alert('Item already added')
+                return
+            }
             itemsInCart.push(item)
             await AsyncStorage.setItem('collection',JSON.stringify(itemsInCart))
             alert("Item Added")
@@ -46,7 +51,7 @@ const ProductInfo = ({product,navigation}) => {
     return (
         
         <View className='bg-[#f6f6f6] position-relative'>
-            <Title title={'Product Details'} navigation={navigation}/>
+            <Title title={'Product Details'} navigation={navigation} name={'Home'}/>
             {/* productImage */}
             <ScrollView contentContainerStyle={{paddingBottom:200}}>
             <View className='w-full h-[370px] bg-white mb-3'>

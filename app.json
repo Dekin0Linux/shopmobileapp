@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "busapp",
-    "slug": "busapp",
+    "name": "shopApp",
+    "slug": "shop-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
@@ -9,16 +9,17 @@
       "**/*"
     ],
 
-    "fonts": [
-      {
-        "fontFamily": "Montserrat-Italic",
-        "fontFile": "./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf"
-      },
-      {
-        "fontFamily": "Montserrat-Bold",
-        "fontFile": "./assets/fonts/Montserrat-VariableFont_wght.ttf"
-      }
-    ],
+    // "fonts": [
+    //   {
+    //     "fontFamily": "Montserrat-Italic",
+    //     "fontFile": "./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf"
+    //   },
+    //   {
+    //     "fontFamily": "Montserrat-Bold",
+    //     "fontFile": "./assets/fonts/Montserrat-VariableFont_wght.ttf"
+    //   }
+    // ]
+
 
     "ios": {
       "supportsTablet": true
